@@ -9,9 +9,14 @@ import {
 
 function Header() {
   return (
-    <Flex as="header" alignItems={"center"}>
+    <Flex
+      as="header"
+      alignItems={"center"}
+      paddingTop={"2rem"}
+      paddingBottom={"2rem"}
+    >
       <Box>
-        <Heading>Mike Borthwick</Heading>
+        <Heading as="h1">Mike Borthwick</Heading>
       </Box>
       <Spacer />
       <Box as="nav">
