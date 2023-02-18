@@ -1,15 +1,27 @@
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  Spacer,
+  UnorderedList,
+} from "@chakra-ui/react";
+
 function Header() {
   return (
-    <header>
-      <h1>Mike Borthwick</h1>
-      <nav>
-        <ul>
-          <li>GitHub</li>
-          <li>Mail</li>
-          <li>LinkedIn</li>
-        </ul>
-      </nav>
-    </header>
+    <Flex as="header" alignItems={"center"}>
+      <Box>
+        <Heading>Mike Borthwick</Heading>
+      </Box>
+      <Spacer />
+      <Box as="nav">
+        <UnorderedList display={"flex"} listStyleType={"none"} gap={2}>
+          <ListItem>GitHub</ListItem>
+          <ListItem>Mail</ListItem>
+          <ListItem>LinkedIn</ListItem>
+        </UnorderedList>
+      </Box>
+    </Flex>
   );
 }
 
