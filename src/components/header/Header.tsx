@@ -13,7 +13,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 function getIconLink(iconType: IconType, url: string) {
   return (
-    <Link href={url} isExternal>
+    <Link href={url} isExternal display="block">
       <Icon as={iconType} boxSize={8} />
     </Link>
   );
