@@ -1,24 +1,25 @@
 import {
-  Button,
   Card as _Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Heading,
+  Icon,
   ListItem,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 
 type Props = {
   heading: string;
   data: string[];
+  icon: IconType;
 };
 
-function Card({ heading, data }: Props) {
+function Card({ heading, data, icon }: Props) {
   return (
     <_Card>
-      <CardHeader>
+      <CardHeader alignItems={"center"} display="flex" gap={2}>
+        <Icon as={icon} boxSize={8} />
         <Heading size="md">{heading}</Heading>
       </CardHeader>
       <CardBody>
