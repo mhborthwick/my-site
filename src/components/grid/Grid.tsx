@@ -12,7 +12,7 @@ function Grid({ children }: Props) {
       columns={{ sm: 2, md: 4 }}
       paddingTop="2rem"
       paddingBottom="2rem"
-      gridTemplateRows="1fr 1fr"
+      gridTemplateRows={{ sm: "1fr 1fr", md: "1fr" }}
     >
       {children}
     </SimpleGrid>

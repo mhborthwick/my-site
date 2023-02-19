@@ -14,6 +14,7 @@ import { Grid } from "./components/grid";
 import { Header } from "./components/header";
 import { Layout } from "./components/layout";
 import { Main } from "./components/main";
+import { Section } from "./components/section";
 import "./index.css";
 
 function getData(heading: Heading) {
@@ -43,6 +44,7 @@ enum Heading {
   TOOLS = "Tools",
   DATABASES = "Databases",
   OS = "OS",
+  PROJECTS = "Projects",
 }
 
 enum Language {
@@ -100,6 +102,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               icon={AiOutlineCode}
             />
           </Grid>
+          <Section data={Heading.PROJECTS} />
           <App />
         </Main>
       </Layout>
