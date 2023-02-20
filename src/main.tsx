@@ -1,4 +1,5 @@
 import { ChakraProvider, Text } from "@chakra-ui/react";
+import theme from "./theme";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -85,7 +86,7 @@ enum OS {
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Layout>
         <Header />
         <Main>
