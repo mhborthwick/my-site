@@ -6,7 +6,12 @@ export function About() {
   return (
     <Box>
       <Flex alignItems={"center"}>
-        <Box flex={8} textAlign={"left"}>
+        <Box
+          flex={8}
+          textAlign={"left"}
+          paddingLeft={"2rem"}
+          paddingRight={"2rem"}
+        >
           <Heading as="h2">Hello! 👋🏽</Heading>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
@@ -28,7 +33,7 @@ export function About() {
           />
         </Box>
       </Flex>
-      <Flex alignItems={"center"} paddingTop="2rem" paddingBottom="2rem">
+      <Flex alignItems={"center"} padding="2rem">
         <Scroll />
         <Text>Scroll</Text>
       </Flex>

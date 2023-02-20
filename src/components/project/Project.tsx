@@ -4,11 +4,17 @@ type Props = {
   heading: string;
   children: React.ReactNode;
   img: any;
+  reverse?: boolean;
 };
 
-function Project({ heading, children, img }: Props) {
+function Project({ heading, children, img, reverse }: Props) {
   return (
-    <Flex alignItems={"center"} paddingTop="2rem" paddingBottom="2rem">
+    <Flex
+      alignItems={"center"}
+      paddingTop="2rem"
+      paddingBottom="2rem"
+      flexDirection={reverse ? "row-reverse" : "initial"}
+    >
       <Box maxWidth="300px" paddingLeft="2rem" paddingRight="2rem">
         <Image
           src={img}
@@ -18,7 +24,7 @@ function Project({ heading, children, img }: Props) {
         />
       </Box>
       <Spacer />
-      <Box flex={8} textAlign="left">
+      <Box flex={8} textAlign="left" paddingLeft={"2rem"} paddingRight={"2rem"}>
         <Heading as="h3">{heading}</Heading>
         {children}
       </Box>

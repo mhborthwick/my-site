@@ -3,7 +3,9 @@ type Props = {
 };
 
 function Layout({ children }: Props) {
-  const tempStyles = { border: "2px solid red" };
+  const tempStyles = {
+    border: "2px solid red",
+  };
   return <div style={tempStyles}>{children}</div>;
 }
 

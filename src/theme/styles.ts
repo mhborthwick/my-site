@@ -3,5 +3,8 @@ export default {
     "*": {
       bg: "#f2f3eb",
     },
+    body: {
+      bg: "#f2f3eb",
+    },
   },
 };

@@ -121,7 +121,18 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               nam labore at. Modi ex cum quidem at eum placeat, porro velit?
             </Text>
           </Project>
-          <App />
+          <Project
+            heading={ProjectHeading.SONGBOOK}
+            img={songBookImg}
+            reverse={true}
+          >
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo unde
+              temporibus similique minima, ducimus architecto ipsum tempora ex,
+              nam labore at. Modi ex cum quidem at eum placeat, porro velit?
+            </Text>
+          </Project>
+          {/* <App /> */}
         </Main>
       </Layout>
     </ChakraProvider>
