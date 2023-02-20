@@ -20,6 +20,7 @@ import { Section } from "./components/section";
 import "./index.css";
 
 import songBookImg from "../src/assets/songbook.png";
+import { Cta } from "./components/cta";
 
 function getData(heading: Heading) {
   switch (heading) {
@@ -52,6 +53,7 @@ enum Heading {
 
 enum SectionHeading {
   PROJECTS = "Projects",
+  CTA = "Interested in chatting?",
 }
 
 enum ProjectHeading {
@@ -113,7 +115,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               icon={AiOutlineCode}
             />
           </Grid>
-          <Section heading={SectionHeading.PROJECTS} />
+          <Section
+            heading={SectionHeading.PROJECTS}
+            options={{ size: "4xl", width: "initial", textAlign: "center" }}
+          />
           <Project heading={ProjectHeading.SONGBOOK} img={songBookImg}>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo unde
@@ -132,6 +137,11 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               nam labore at. Modi ex cum quidem at eum placeat, porro velit?
             </Text>
           </Project>
+          <Section
+            heading={SectionHeading.CTA}
+            options={{ size: "4xl", width: "initial", textAlign: "center" }}
+          />
+          <Cta text={"Let's talk!"} />
           {/* <App /> */}
         </Main>
       </Layout>
