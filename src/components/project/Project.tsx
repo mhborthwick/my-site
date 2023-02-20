@@ -8,7 +8,7 @@ type Props = {
 
 function Project({ heading, children, img }: Props) {
   return (
-    <Flex alignItems={"center"}>
+    <Flex alignItems={"center"} paddingTop="2rem" paddingBottom="2rem">
       <Box maxWidth="300px" paddingLeft="2rem" paddingRight="2rem">
         <Image
           src={img}
