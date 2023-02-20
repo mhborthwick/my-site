@@ -32,6 +32,7 @@ function getData(heading: Heading) {
         Tools.JIRA,
         Tools.CI_CD,
         Tools.CCP,
+        Tools.GRAFANA,
         Tools.AGILE,
         Tools.DEV_OPS,
       ];
@@ -72,6 +73,7 @@ enum Tools {
   CCP = "GCP",
   CI_CD = "CI / CD",
   AGILE = "Agile Methodologies",
+  GRAFANA = "Grafana",
   DEV_OPS = "Kubernetes, Docker",
 }
 
