@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Text } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -14,8 +14,11 @@ import { Grid } from "./components/grid";
 import { Header } from "./components/header";
 import { Layout } from "./components/layout";
 import { Main } from "./components/main";
+import { Project } from "./components/project";
 import { Section } from "./components/section";
 import "./index.css";
+
+import songBookImg from "../src/assets/songbook.png";
 
 function getData(heading: Heading) {
   switch (heading) {
@@ -44,7 +47,14 @@ enum Heading {
   TOOLS = "Tools",
   DATABASES = "Databases",
   OS = "OS",
+}
+
+enum SectionHeading {
   PROJECTS = "Projects",
+}
+
+enum ProjectHeading {
+  SONGBOOK = "Songbook",
 }
 
 enum Language {
@@ -102,7 +112,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
               icon={AiOutlineCode}
             />
           </Grid>
-          <Section data={Heading.PROJECTS} />
+          <Section heading={SectionHeading.PROJECTS} />
+          <Project heading={ProjectHeading.SONGBOOK} img={songBookImg}>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo unde
+              temporibus similique minima, ducimus architecto ipsum tempora ex,
+              nam labore at. Modi ex cum quidem at eum placeat, porro velit?
+            </Text>
+          </Project>
           <App />
         </Main>
       </Layout>

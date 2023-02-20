@@ -1,14 +1,14 @@
 import { Box, Heading } from "@chakra-ui/react";
 
 type Props = {
-  data: string;
+  heading: string;
 };
 
-function Section({ data }: Props) {
+function Section({ heading }: Props) {
   return (
     <Box paddingTop={"2rem"} paddingBottom={"2rem"}>
       <Heading as="h2" size="4xl">
-        {data.toUpperCase()}
+        {heading.toUpperCase()}
       </Heading>
     </Box>
   );
