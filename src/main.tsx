@@ -58,6 +58,7 @@ enum SectionHeading {
 
 enum ProjectHeading {
   SONGBOOK = "Songbook",
+  AWA_MONITORING = "awa-monitoring",
 }
 
 enum Language {
@@ -127,7 +128,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             </Text>
           </Project>
           <Project
-            heading={ProjectHeading.SONGBOOK}
+            heading={ProjectHeading.AWA_MONITORING}
             img={songBookImg}
             reverse={true}
           >
